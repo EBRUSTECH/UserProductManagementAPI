@@ -1,0 +1,7 @@
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.csproj.AssemblyReference.cache
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.AssemblyInfoInputs.cache
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.AssemblyInfo.cs
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.csproj.CoreCompileInputs.cache
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DECAGON\OneDrive\Desktop\IfinionAssessment\UPA\API\obj\Debug\net8.0\UserProduct.Api.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,373 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\API\\UserProduct.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\API\\UserProduct.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\API\\UserProduct.Api.csproj",
+        "projectName": "UserProduct.Api",
+        "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\API\\UserProduct.Api.csproj",
+        "packagesPath": "C:\\Users\\DECAGON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DECAGON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj"
+              },
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Infrastructure\\UserProduct.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Infrastructure\\UserProduct.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj",
+        "projectName": "UserProduct.Core",
+        "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj",
+        "packagesPath": "C:\\Users\\DECAGON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DECAGON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Data\\UserProduct.Data.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Data\\UserProduct.Data.csproj"
+              },
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Data\\UserProduct.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Data\\UserProduct.Data.csproj",
+        "projectName": "UserProduct.Data",
+        "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Data\\UserProduct.Data.csproj",
+        "packagesPath": "C:\\Users\\DECAGON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DECAGON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj",
+        "projectName": "UserProduct.Domain",
+        "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj",
+        "packagesPath": "C:\\Users\\DECAGON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DECAGON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Infrastructure\\UserProduct.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Infrastructure\\UserProduct.Infrastructure.csproj",
+        "projectName": "UserProduct.Infrastructure",
+        "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Infrastructure\\UserProduct.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\DECAGON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DECAGON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\Core\\UserProduct.Core.csproj"
+              },
+              "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj": {
+                "projectPath": "C:\\Users\\DECAGON\\OneDrive\\Desktop\\IfinionAssessment\\UPA\\UserProduct.Domain\\UserProduct.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
