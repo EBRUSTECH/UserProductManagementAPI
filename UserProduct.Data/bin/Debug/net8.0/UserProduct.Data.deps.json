@@ -234,6 +234,9 @@
         }
       },
       "UserProduct.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0"
+        },
         "runtime": {
           "UserProduct.Domain.dll": {}
         }

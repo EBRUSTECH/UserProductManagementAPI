@@ -14,6 +14,5 @@ namespace UserProduct.Core.Abstractions
         public Task<Result> ResetPasswordAsync(ResetPasswordDto resetPasswordDto);
         public Task<Result> ForgotPassword(ResetPasswordDto resetPasswordDto);
         public Task<Result> ConfirmEmail(string email, string token);
-        public Task<Result> ChangePasswordAsync(ChangePasswordDto changePasswordDto);
     }
 }

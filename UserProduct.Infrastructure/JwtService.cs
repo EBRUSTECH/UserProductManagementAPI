@@ -7,6 +7,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using UserProduct.Core.Abstractions;
+using UserProduct.Domain.Entities;
 
 namespace UserProduct.Infrastructure
 {
@@ -19,7 +21,7 @@ namespace UserProduct.Infrastructure
             _config = config;
         }
 
-        public string GenerateToken(User user, IList<string> roles)
+        public string GenerateToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -31,10 +33,7 @@ namespace UserProduct.Infrastructure
             new(JwtRegisteredClaimNames.Sub, user.Id),
             new(JwtRegisteredClaimNames.Name, $"{user.FirstName} {user.LastName}"),
             new(JwtRegisteredClaimNames.Email, user.Email!),
-            new("Image", user.ImageUrl ?? string.Empty)
         };
-            claimList.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
-
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {

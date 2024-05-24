@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using UserProduct.Core.Dtos;
 using UserProduct.Core.Services;
 
@@ -7,6 +10,7 @@ namespace UserProduct.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/products")]
+    /*[Authorize]*/
     public class ProductController : ControllerBase
     {
         private readonly ProductService _productService;
@@ -21,6 +25,14 @@ namespace UserProduct.Api.Controllers
         {
             await _productService.AddProduct(productDto);
             return Ok(new { message = "Product added successfully" });
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<PaginatorDto<IEnumerable<ProductDto>>>> GetProducts([FromQuery] PaginationFilter paginationFilter)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var pagedProducts = await _productService.GetProducts(paginationFilter, userId);
+            return Ok(pagedProducts);
         }
 
         [HttpPut("{id}")]

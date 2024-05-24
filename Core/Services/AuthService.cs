@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -9,7 +8,6 @@ using System.Threading.Tasks;
 using System.Web;
 using UserProduct.Core.Abstractions;
 using UserProduct.Core.Dtos;
-using UserProduct.Domain.Constants;
 using UserProduct.Domain.Entities;
 
 namespace UserProduct.Core.Services
@@ -53,26 +51,15 @@ namespace UserProduct.Core.Services
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
 
-            if (!result.Succeeded)
-                return result.Errors.Select(error => new Error(error.Code, error.Description)).ToArray();
-
-            result = await _userManager.AddToRoleAsync(user, RolesConstant.User);
-            if (!result.Succeeded)
-                return result.Errors.Select(error => new Error(error.Code, error.Description)).ToArray();
-
-            var isSaved = await _unitOfWork.SaveChangesAsync() > 0;
-            if (!isSaved)
-                return new Error[] { new("User.NotSaved", "User not saved") };
-
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink =
-                $"{_configuration["ConfirmationUrl"]}?email={HttpUtility.UrlEncode(user.Email)}&token={HttpUtility.UrlEncode(token)}";
+                $"{_configuration["ConfirmEmailUrl"]}?email={HttpUtility.UrlEncode(user.Email)}&token={HttpUtility.UrlEncode(token)}";
 
             const string emailSubject = "Confirm Your Email";
 
             var emailBody = $"Hello {user.FirstName}, please confirm your email by clicking this link: {confirmationLink}.";
 
-            var isEmailSent = await _emailService.SendEmailAsync(registerDto.Email, emailSubject, emailBody);
+            var isEmailSent = await _emailService.SendEmailAsync(registerDto.Email, "Confirm Email", emailBody);
             if (!isEmailSent)
                 return new Error[] { new("Auth.Error", "Error occurred while sending confirmation email") };
 
@@ -91,10 +78,9 @@ namespace UserProduct.Core.Services
             if (!isValidUser)
                 return new Error[] { new("Auth.Error", "email or password not correct") };
 
-            var roles = await _userManager.GetRolesAsync(user);
-            var token = _jwtService.GenerateToken(user, roles);
+            var token = _jwtService.GenerateToken(user);
 
-            return new LoginResponseDto(token, roles.First());
+            return new LoginResponseDto(token);
         }
 
         public async Task<Result> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
@@ -129,7 +115,7 @@ namespace UserProduct.Core.Services
 
             var isSuccessful = await _emailService.SendEmailAsync(resetPasswordDto.Email, emailSubject, emailBody);
             if (!isSuccessful)
-                return new Error[] { new("Auth.Error", "Error occured while sending reset password email") };
+                return new Error[] { new("Auth.Error", "Error occurred while sending reset password email") };
 
             return Result.Success();
         }
@@ -158,27 +144,6 @@ namespace UserProduct.Core.Services
             }
 
             return Result.Success();
-        }
-
-        public async Task<Result> ChangePasswordAsync(ChangePasswordDto model)
-        {
-            var user = await _userManager.FindByEmailAsync(model.Email);
-
-            if (user == null)
-                return new Error[] { new("Auth.Error", "email not correct") };
-
-            if (!await _userManager.CheckPasswordAsync(user, model.OldPassword))
-                return new Error[] { new("Auth.Error", "password not correct") };
-
-            if (model.NewPassword != model.ConfirmPassword)
-                return new Error[] { new("Auth.Error", "Newpassword and Confirmpassword must match") };
-
-            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
-            if (!result.Succeeded)
-                return result.Errors.Select(error => new Error(error.Code, error.Description)).ToArray();
-
-            return Result.Success();
-
         }
     }
 }
